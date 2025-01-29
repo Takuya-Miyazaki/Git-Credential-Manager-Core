@@ -35,7 +35,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Set up .NET
-      uses: actions/setup-dotnet@v4.1.0
+      uses: actions/setup-dotnet@v4.2.0
       with:
         dotnet-version: 8.0.x
 
@@ -57,8 +57,8 @@ jobs:
 
     - name: Set up signing/notarization infrastructure
       env:
-        A1: ${{ secrets.APPLICATION_CERTIFICATE_BASE64 }}
-        A2: ${{ secrets.APPLICATION_CERTIFICATE_PASSWORD }}
+        A1: ${{ secrets.GATEWATCHER_DEVELOPER_ID_CERT }}
+        A2: ${{ secrets.GATEWATCHER_DEVELOPER_ID_PASSWORD }}
         I1: ${{ secrets.INSTALLER_CERTIFICATE_BASE64 }}
         I2: ${{ secrets.INSTALLER_CERTIFICATE_PASSWORD }}
         N1: ${{ secrets.APPLE_TEAM_ID }}
@@ -150,7 +150,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Set up .NET
-      uses: actions/setup-dotnet@v4.1.0
+      uses: actions/setup-dotnet@v4.2.0
       with:
         dotnet-version: 8.0.x
 
@@ -190,7 +190,7 @@ jobs:
 
     # The Azure Code Signing action overrides the .NET version, so we reset it.
     - name: Set up .NET
-      uses: actions/setup-dotnet@v4.1.0
+      uses: actions/setup-dotnet@v4.2.0
       with:
         dotnet-version: 8.0.x
 
@@ -239,7 +239,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Set up .NET
-      uses: actions/setup-dotnet@v4.1.0
+      uses: actions/setup-dotnet@v4.2.0
       with:
         dotnet-version: 8.0.x
 
@@ -320,7 +320,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Set up .NET
-      uses: actions/setup-dotnet@v4.1.0
+      uses: actions/setup-dotnet@v4.2.0
       with:
         dotnet-version: 8.0.x
 
@@ -393,7 +393,7 @@ jobs:
         path: signed
 
     - name: Set up .NET
-      uses: actions/setup-dotnet@v4.1.0
+      uses: actions/setup-dotnet@v4.2.0
       with:
         dotnet-version: 8.0.x
 
@@ -497,7 +497,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up .NET
-        uses: actions/setup-dotnet@v4.1.0
+        uses: actions/setup-dotnet@v4.2.0
         with:
           dotnet-version: 8.0.x
 
@@ -567,7 +567,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up .NET
-        uses: actions/setup-dotnet@v4.1.0
+        uses: actions/setup-dotnet@v4.2.0
         with:
           dotnet-version: 8.0.x
 
